@@ -10,46 +10,46 @@ Rebuilt on:
 
 Commands used:
 1. OpenCV configuration - 
-(1) Download OpenCV Windows Prebuilt binaries
-(2) Extract to C:\OpenCV
-(3) Put such directories in system PATH environment variables:
+- (1) Download OpenCV Windows Prebuilt binaries
+- (2) Extract to C:\OpenCV 
+- (3) Put such directories in system PATH environment variables:
 
 2. Build DBoW:
-cmake -G "Visual Studio 17 2022" -A x64 ..
-cmake --build . // build DEBUG
-cmake --build . --config Release // build RELEASE
+- cmake -G "Visual Studio 17 2022" -A x64 ..
+- cmake --build . // build DEBUG
+- cmake --build . --config Release // build RELEASE
 
 3. No need to build Eigen
 4. Build Pangolin:
-mkdir build && cd build
-cmake -G "Visual Studio 17 2022" -A x64 ..
-cmake --build .
-cmake --build . --config Release
+- mkdir build && cd build
+- cmake -G "Visual Studio 17 2022" -A x64 ..
+- cmake --build .
+- cmake --build . --config Release
 
-Note: For China users, need to ensure VPN is working.
+** Note: For China users, need to ensure VPN is working. **
 Suppose you're using V2Ray:
-set http_proxy=http://127.0.0.1:10809
-set https_proxy=http://127.0.0.1:10809
-Use such commands to ensure traffic go thru VPN.
+- set http_proxy=http://127.0.0.1:10809
+- set https_proxy=http://127.0.0.1:10809
+- Use such commands to ensure traffic go thru VPN.
 
 5. Build g2o:
-mkdir build && cd build
-cmake -G "Visual Studio 17 2022" -A x64 ..
-cmake --build .
-cmake --build . --config Release
+- mkdir build && cd build
+- cmake -G "Visual Studio 17 2022" -A x64 ..
+- cmake --build .
+- cmake --build . --config Release
 
 6. Build ORBSLAM2:
-mkdir build && cd build
-cmake -G "Visual Studio 17 2022" -A x64 ..
-cmake --build .
-cmake --build . --config Release
+- mkdir build && cd build
+- cmake -G "Visual Studio 17 2022" -A x64 ..
+- cmake --build .
+- cmake --build . --config Release
 
 7. Run example:
-(1) Download dataset from: vision.in.tum.de/rgbd/dataset/freiburg2/rgbd_dataset_freiburg2_desk.tgz
-(2) Extract to ../orbslam_data
-(3) Extrac vocabulary to the folder.
-(4) Run mono_tum.exe:
-mono_tum ../../../Vocabulary/ORBvoc.txt ../TUM2.yaml ../../../../orbslam_dataset/rgbd_dataset_freiburg2_desk
+- (1) Download dataset from: vision.in.tum.de/rgbd/dataset/freiburg2/rgbd_dataset_freiburg2_desk.tgz
+- (2) Extract to ../orbslam_data
+- (3) Extrac vocabulary to the folder.
+- (4) Run mono_tum.exe:
+- mono_tum ../../../Vocabulary/ORBvoc.txt ../TUM2.yaml ../../../../orbslam_dataset/rgbd_dataset_freiburg2_desk
 
 Updated: 2021-11-11
 Originally forked from phdsky
