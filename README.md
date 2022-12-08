@@ -13,7 +13,8 @@ Commands used:
 - (1) Download OpenCV Windows Prebuilt binaries
 - (2) Extract to C:\OpenCV 
 - (3) Put such directories in system PATH environment variables:
-
+  - C:\opencv\build
+  - C:\opencv\build\x64\vc15\bin
 2. Build DBoW:
 - cmake -G "Visual Studio 17 2022" -A x64 ..
 - cmake --build . // build DEBUG
